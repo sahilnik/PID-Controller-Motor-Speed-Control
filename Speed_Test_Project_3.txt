@@ -1,0 +1,37 @@
+Project 3
+----------------------------------------------------------------
+
+Section 2)
+
+Part a)
+This testing was performed without the use of a PID controller.
+I found through trial and error testing that when the motor PWM
+is running at 70% PWM Duty Cycle (178/255), the output speed was
+steady around 500 RPM. Due to the lack of any feedback loop,
+variation of + 5 RPM was present.
+Therefore although rated at 500 RPM at 12V, with PWM control
+we can achieve 500 RPM at a duty cycle of 70%.
+At 100% PWM duty cycle the output motor speed is 560 RPM.
+
+Part b)
+Since there is no feedback loop, the motor requires a greater
+duty cycle to overcome the initial static friction that is
+holding it in place. Without an integral gain feedback, the
+output to the motor has to be large enough to begin spinning
+without increasing.
+Therefore I performed 2 experiments regarding minimum motor
+speed.
+
+Experiment 1.	If the duty cycle is set to 1% (2/255) the motor
+		cannot begin rotating without external help.
+		I gave the motor a push to begin its rotation
+		while the PWM duty cycle is steady at 1%. The
+		motor speed at 1% duty cycle, once the motor is
+		moving is around 115 RPM.
+
+Experiment 2.	Without an external push, the minimum duty cycle
+		required to move the motor was found to be 
+		15% (38/255). At this duty cycle the motor 
+		reaches a steady state speed of 183 RPM.
+
+
